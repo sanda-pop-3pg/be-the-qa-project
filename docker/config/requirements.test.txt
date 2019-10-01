@@ -1,0 +1,5 @@
+pytest==3.7.0
+pytz==2018.5
+requests==2.18.4
+pytest-cov==2.5.1
+selenium
