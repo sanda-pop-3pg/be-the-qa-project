@@ -8,8 +8,6 @@
 
 3. Create a github account if you don't have one: [https://github.com/](https://github.com/)
 
-4. Configure Pycharm:
-
 
 ## Selenium Local Setup
 
@@ -83,3 +81,99 @@ in `Dockerfile`:
 
     WORKDIR /test-infrastructure
     ADD . /test-infrastructure
+
+
+## Extra Docker information
+
+### Docker commands cheat-sheet
+
+[Docker commandline](https://docs.docker.com/engine/reference/commandline/docker/)
+
+- Build image from a dockerfile
+
+    `docker build -f <path_to_dockerfile> -t <image_name:tag>  --force-rm <path_to_contents>`
+
+- List images
+
+    `docker images`
+
+- Get an image from the docker-hub
+
+    `docker pull <image_name:tag>`
+
+- Upload an image to docker-hub
+
+    `docker push <image_name:tag>`
+
+- Tag an image
+
+    `docker tag <source_image_name:tag> <target_image_name:tag>`
+
+- Spin a container from an image
+
+    `docker run -it --rm -p <external_port:internal_port> <image_name:tag> <commands>`
+
+- List containers that are running
+
+    `docker ps`
+
+- List all containers
+
+    `docker ps -a`
+
+- Run a command (e.g. open a shell session) on a running container
+
+    First find out the ID or the name of the machine by running:
+
+    `docker ps`
+
+    Run the `docker exec` command, using the intended docker machine ID or name (either of them should work):
+
+    `docker exec -it <machine ID or name> bash`
+
+    E.g.:
+    `docker exec -it 0e3816ba38a2 bash`
+
+- Stop container
+
+    `docker stop <container_id>`
+
+- Delete container
+
+    `docker rm <container_id>`
+
+- Delete image
+
+    `docker rmi <image_id>`
+
+- Delete all containers that are not running
+
+    `docker container prune`
+
+- Delete all images that are not latest
+
+    `docker image prune`
+
+- Create a network
+
+    `docker network create <network_name>`
+
+- List existing networks
+
+    `docker network list`
+
+- See containers in the network
+
+    `docker network inspect <network_name>`
+
+- Remove a network
+
+    `docker network rm <network_id>`
+
+
+### Docker-Compose
+
+[This `Get started with Docker Compose`](https://docs.docker.com/compose/gettingstarted/) intro is worth a read.
+
+It will, at least, give you an idea on what it takes to use Docker Compose to run containers on a dev machine,
+where you'd want a container to take into account code/test files changes.
