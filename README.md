@@ -69,5 +69,17 @@ To run a specific test use the pytest parameter `-k testname`
 ## Test Development
 
 After the containers are started, if the volumes are set correctly, all the changes are instantly
-available on the test container and can be run
+available on the test container and can be run.
 
+Check the folders eet in docker-compose under volumes match your local folder and the working directory.
+
+in `docker-compose`:
+
+    volumes:
+            - /tmp:/tmp/results/
+            - .:/test-infrastructure
+
+in `Dockerfile`:
+
+    WORKDIR /test-infrastructure
+    ADD . /test-infrastructure
