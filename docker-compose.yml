@@ -25,7 +25,7 @@ services:
       - docker/config/.env_demo
     volumes:
         - /tmp:/tmp/results/
-        - .:/selenium-python_wks
+        - .:/test-infrastructure
     networks:
       - spw
 
