@@ -1,3 +1,0 @@
-# Python Training
-
-## Data Structures
