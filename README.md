@@ -8,6 +8,9 @@
 
 3. Create a github account if you don't have one: [https://github.com/](https://github.com/)
 
+4. Install docker and docker compose: [Docker Install on Windows](https://docs.docker.com/docker-for-windows/install/),
+[Docker-Compose Install](https://docs.docker.com/compose/install/)
+
 
 ## Selenium Local Setup
 
@@ -31,7 +34,7 @@ The tests will be run on a remote selenium host represented by a container creat
 
 The selenium images can be found [here](https://hub.docker.com/u/selenium/)
 
-Instructions on docker setup can be found [here](https://github.com/SeleniumHQ/docker-selenium)
+Instructions on selenium docker setup can be found [here](https://github.com/SeleniumHQ/docker-selenium)
 
 The setup includes a host which has selenium and chrome installed.
 
