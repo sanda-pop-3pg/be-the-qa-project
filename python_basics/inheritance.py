@@ -64,7 +64,7 @@ class Circle(Shape):
         return 2 * math.pi * self.__radius
 
 
-
+r1 =Rectangle(70.5, 80.6)
 
 print("Area of rectangle r1:", r1.get_area())
 print("Perimeter of rectangle r1:", r1.get_perimeter())
