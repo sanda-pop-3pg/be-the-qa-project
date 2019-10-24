@@ -24,17 +24,19 @@ def test_login_valid(driver):
     time.sleep(2)
     login.click_submit_login()
     time.sleep(2)
+
     login.validate_sign_in()
+
     login.click_sign_out()
 
-    contact = ContactUsPage(driver)
-    contact.click_contact_us()
-    time.sleep(2)
-    contact.select_subject_heading("Webmaster")
-    contact.enter_email("admin12345@gmail.com")
-    contact.enter_id_order("12345")
-    contact.enter_message("Dress to impress")
-    contact.click_send()
+    # contact = ContactUsPage(driver)
+    # contact.click_contact_us()
+    # time.sleep(2)
+    # contact.select_subject_heading("Webmaster")
+    # contact.enter_email("admin12345@gmail.com")
+    # contact.enter_id_order("12345")
+    # contact.enter_message("Dress to impress")
+    # contact.click_send()
 
 
 
